@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#top-div {
+  text-align: center;
+  display: flex;
+}
+
+#tree1 {
+  height: 200px;
+  width: 200px;
+}
+#svg-car {
+  position: absolute;
+}
+#wind {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+#luggageInTruck-1 {
+  animation: mymove 1s;
+  transform-origin: bottom;
+}
+#luggageInTruck-2 {
+  animation: box2 0.9s ease-in-out infinite alternate;
+  transform-origin: bottom;
+}
+
+#Car-Body {
+  animation: carBody 1s ease-in-out infinite alternate;
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
+
+#front-wheel,
+#back-wheel {
+  animation: wheel 1s infinite linear;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#smoke {
+  width: 10px;
+  position: absolute;
+  right: 30px;
+  top: 150px;
+  animation: smoke 1.2s linear infinite;
+  -webkit-animation: smoke 1s linear infinite;
+}
+
+#box1,
+#box2 {
+  margin-top: 2rem;
+  width: 300px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: -1;
+  animation: mymove 5s ease-in-out infinite;
+}
+
+@keyframes mymove {
+  0% {
+    left: -2000px;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes wheel {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(-360deg);
+  }
+}
+
+@keyframes box1 {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(15deg);
+  }
+}
+
+@keyframes box2 {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(12deg);
+  }
+}
+
+@keyframes carBody {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(20deg);
+  }
+}
